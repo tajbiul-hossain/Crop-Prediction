@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Prediction</title>
+  </head>
+  <p>
+    <h1>Crop Prediction System</h1>
+    <p>Enter values in the following fields</p>
+
+    <form action="" method="POST">
+      <input type="number" name="nitro" placeholder="Nitrogen" required />
+      <input type="number" name="phos" placeholder="Phosphorus" required />
+      <input type="number" name="potta" placeholder="Pottasium" required />
+      <input type="number" name="temp" placeholder="Temperature" required />
+      <input type="number" name="humi" placeholder="Humidity" required />
+      <input type="number" name="ph" placeholder="PH" required />
+      <input type="number" name="rain" placeholder="Rainfall" required />
+      <input type="submit" />
+    </form>
+
+    {% if pred_data %}
+      <p>
+        The crop you can grow is:
+        <span style="font-size: 1.5rem; font-weight: bold;">{{pred_data}}</span>
+      </p>
+      
+    {% endif %}
+  </body>
+</html>
